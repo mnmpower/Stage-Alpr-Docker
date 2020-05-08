@@ -1,0 +1,1911 @@
+{
+  "Actions": {
+    "AddReference": {
+      "RefreshQueryOnCompleted": true,
+      "Offset": 300,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Add"
+      },
+      "IconName": "Add"
+    },
+    "BulkEdit": {
+      "Offset": 400,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "SelectionRule": ">0",
+      "DisplayName": {
+        "en": "Edit"
+      },
+      "IconName": "Edit"
+    },
+    "CancelEdit": {
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Cancel"
+      },
+      "IconName": "CancelEdit"
+    },
+    "CancelSave": {
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Cancel"
+      },
+      "IconName": "Cancel"
+    },
+    "Delete": {
+      "RefreshQueryOnCompleted": true,
+      "Offset": 500,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "SelectionRule": ">0",
+      "DisplayName": {
+        "en": "Delete"
+      },
+      "ConfirmationMessageKey": "AskForDeleteItems",
+      "IconName": "Delete"
+    },
+    "DialogCancel": {
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Cancel"
+      },
+      "IconName": "Cancel"
+    },
+    "DialogOk": {
+      "IsSystem": true,
+      "SelectionRule": "> 0",
+      "DisplayName": {
+        "en": "OK"
+      },
+      "IconName": "Ok"
+    },
+    "Edit": {
+      "Offset": 100,
+      "ShowedOn": 5,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Edit"
+      },
+      "IconName": "Edit"
+    },
+    "EndEdit": {
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Save"
+      },
+      "IconName": "Save"
+    },
+    "ExportToCsv": {
+      "Offset": 30001,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Export"
+      },
+      "IconName": "Excel"
+    },
+    "ExportToExcel": {
+      "Offset": 30000,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Export"
+      },
+      "IconName": "Excel"
+    },
+    "New": {
+      "Offset": 200,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "New"
+      },
+      "IconName": "Add"
+    },
+    "ProcessImage": {
+      "ShowedOn": 1,
+      "DisplayName": {
+        "en": "Process image"
+      }
+    },
+    "Remove": {
+      "RefreshQueryOnCompleted": true,
+      "Offset": 600,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "SelectionRule": ">0",
+      "DisplayName": {
+        "en": "Remove"
+      },
+      "IconName": "Remove"
+    },
+    "Save": {
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Save"
+      },
+      "IconName": "Save"
+    },
+    "SendMessage": {
+      "ShowedOn": 1,
+      "DisplayName": {
+        "en": "Send message"
+      }
+    },
+    "ShowHelp": {
+      "Offset": 60000,
+      "ShowedOn": 7,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Help"
+      },
+      "IsPinned": true,
+      "IconName": "Help"
+    },
+    "viLoadAdvancedSearch": {
+      "Offset": 1600,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Load"
+      }
+    },
+    "viSaveAdvancedSearch": {
+      "Offset": 1600,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Save"
+      }
+    },
+    "viSearch": {
+      "Offset": 1500,
+      "ShowedOn": 2,
+      "IsSystem": true,
+      "DisplayName": {
+        "en": "Search"
+      },
+      "IsPinned": true,
+      "IconName": "Filter"
+    }
+  },
+  "DataTypes": {
+    "AsDetail": {
+      "$id": "DataType:AsDetail",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:2e0f5579-35fd-4cb2-bb7c-992bbe3b6587"
+      },
+      "Attribute": {
+        "$ref": "Template:63ae4bc2-371d-4db5-9fcd-469ff6f5ef36"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "BinaryFile": {
+      "$id": "DataType:BinaryFile",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:645e6a65-4132-45bd-b9f7-891cbf7b7eeb"
+      },
+      "Attribute": {
+        "$ref": "Template:385d55b6-75fd-4e63-92cf-2427fd82b8f9"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Boolean": {
+      "$id": "DataType:Boolean",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:5256f01e-1e54-4969-9dd2-d67944dfba9e"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Byte": {
+      "$id": "DataType:Byte",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "ComboBox": {
+      "$id": "DataType:ComboBox",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:6099c1a1-9f34-44da-ac4a-fc79dc2f4792"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "CommonMark": {
+      "$id": "DataType:CommonMark",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:bfff11cc-31f8-4d81-84b2-6720d80be7b8"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Date": {
+      "$id": "DataType:Date",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:0bb94fa1-2508-481f-9e20-c29500e99a69"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "DateTime": {
+      "$id": "DataType:DateTime",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:bd4108f2-585a-4b66-ada5-4ba5257ecd38"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "DateTimeOffset": {
+      "$id": "DataType:DateTimeOffset",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:f29e30bc-ce67-4f9b-87ad-56bbab842cf3"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Decimal": {
+      "$id": "DataType:Decimal",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Double": {
+      "$id": "DataType:Double",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "DropDown": {
+      "$id": "DataType:DropDown",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:8fbf5997-1b1c-41a2-a3dc-91482fc8172f"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Enum": {
+      "$id": "DataType:Enum",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:8fbf5997-1b1c-41a2-a3dc-91482fc8172f"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "FlagsEnum": {
+      "$id": "DataType:FlagsEnum",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:79d3d0b5-78d1-4150-8215-c9f9acc13385"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Geography": {
+      "$id": "DataType:Geography",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": true,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:e9e415b8-94fd-4201-b965-8f8660cb7cf9"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Guid": {
+      "$id": "DataType:Guid",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:700c8a54-1c5c-4f73-9d40-c9ba45faf9f3"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Image": {
+      "$id": "DataType:Image",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:07ee5ebd-7000-423a-b87d-8f6ead81fda7"
+      },
+      "Attribute": {
+        "$ref": "Template:e849ede4-2d23-4e00-ab59-683a554b3378"
+      },
+      "Column": {
+        "$ref": "Template:fa2a2b12-996a-4ad2-b416-63a723bfdc12"
+      }
+    },
+    "Int16": {
+      "$id": "DataType:Int16",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Int32": {
+      "$id": "DataType:Int32",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Int64": {
+      "$id": "DataType:Int64",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "KeyValueList": {
+      "$id": "DataType:KeyValueList",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:a782abc5-9c9d-43d4-a8c1-41a9e60f8f2c"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "MultiLineString": {
+      "$id": "DataType:MultiLineString",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:bfff11cc-31f8-4d81-84b2-6720d80be7b8"
+      },
+      "Attribute": {
+        "$ref": "Template:11aa1940-26ca-473f-864e-a97b0d4adbba"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "MultiString": {
+      "$id": "DataType:MultiString",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:4865df2c-404b-4517-a1b2-c4e8dd43dc34"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableBoolean": {
+      "$id": "DataType:NullableBoolean",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:9db770fa-2872-4057-8e84-3fde45a13a30"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableByte": {
+      "$id": "DataType:NullableByte",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableDate": {
+      "$id": "DataType:NullableDate",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:95b4e982-8285-4004-8eb5-eb768fd2d394"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableDateTime": {
+      "$id": "DataType:NullableDateTime",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1902bc0f-c836-487b-bd39-8699750f30cf"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableDateTimeOffset": {
+      "$id": "DataType:NullableDateTimeOffset",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:5f45418c-3bad-4bf8-99e9-554cf5923ee4"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableDecimal": {
+      "$id": "DataType:NullableDecimal",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableDouble": {
+      "$id": "DataType:NullableDouble",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableGuid": {
+      "$id": "DataType:NullableGuid",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:64eb6cec-f773-4795-8b0d-bef2d1647ab9"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableInt16": {
+      "$id": "DataType:NullableInt16",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableInt32": {
+      "$id": "DataType:NullableInt32",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableInt64": {
+      "$id": "DataType:NullableInt64",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableSByte": {
+      "$id": "DataType:NullableSByte",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableSingle": {
+      "$id": "DataType:NullableSingle",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableTime": {
+      "$id": "DataType:NullableTime",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:d27b6c7f-5d32-45ac-9445-1cecbfc38b2b"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableUInt16": {
+      "$id": "DataType:NullableUInt16",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableUInt32": {
+      "$id": "DataType:NullableUInt32",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableUInt64": {
+      "$id": "DataType:NullableUInt64",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "NullableUser": {
+      "$id": "DataType:NullableUser",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:a80fb659-9ebe-456d-ab1f-344c1f202724"
+      },
+      "Attribute": {
+        "$ref": "Template:34b00ecc-344e-40cb-9bb0-df1272310191"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Password": {
+      "$id": "DataType:Password",
+      "IsSystem": true,
+      "CanSort": false,
+      "CanFilter": false,
+      "CanListDistincts": false,
+      "AttributeEdit": {
+        "$ref": "Template:61dbcbb0-2f01-402d-9b30-3422cf41ee39"
+      },
+      "Attribute": {
+        "$ref": "Template:ed5a0666-2f24-414a-8a90-1756c49661cd"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Reference": {
+      "$id": "DataType:Reference",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:21bdfcc1-15db-4400-a803-0bf3f12ad8a6"
+      },
+      "Attribute": {
+        "$ref": "Template:75448ab5-7c4f-4526-bc38-f4cb7b0cdbef"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "SByte": {
+      "$id": "DataType:SByte",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Single": {
+      "$id": "DataType:Single",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": false,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "String": {
+      "$id": "DataType:String",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:e9e415b8-94fd-4201-b965-8f8660cb7cf9"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "Time": {
+      "$id": "DataType:Time",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:98d427dd-6819-4199-bff6-d3bb9616f21c"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "TranslatedString": {
+      "$id": "DataType:TranslatedString",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:2df22684-fb7e-4f03-bf8d-4510f7ab6429"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "UInt16": {
+      "$id": "DataType:UInt16",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "UInt32": {
+      "$id": "DataType:UInt32",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "UInt64": {
+      "$id": "DataType:UInt64",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:1641ce2e-5a3d-4a37-9b96-6b78bebfebd1"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "User": {
+      "$id": "DataType:User",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:a80fb659-9ebe-456d-ab1f-344c1f202724"
+      },
+      "Attribute": {
+        "$ref": "Template:34b00ecc-344e-40cb-9bb0-df1272310191"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    },
+    "YesNo": {
+      "$id": "DataType:YesNo",
+      "IsSystem": true,
+      "CanSort": true,
+      "CanFilter": true,
+      "CanListDistincts": true,
+      "AttributeEdit": {
+        "$ref": "Template:c211ea94-534c-4a53-ac8e-efcc374b3946"
+      },
+      "Attribute": {
+        "$ref": "Template:b7a5cc2a-a7a2-4e35-92d6-064121b85e88"
+      },
+      "Column": {
+        "$ref": "Template:6674a5e0-639a-4f58-854b-ae1f1c729a0f"
+      }
+    }
+  },
+  "Schemas": {
+    "AlprApp": {
+      "PersistentObjects": {
+        "5655815a-bcb2-34fb-b7b8-6b66497676bb": {
+          "$id": "PersistentObject:5655815a-bcb2-34fb-b7b8-6b66497676bb",
+          "SchemaName": "AlprApp",
+          "Type": "AlprData",
+          "Salt": "zKsL7pO4iCUM8yDrk-pW_4VCKTS2MbllAmp47LQ9OEQ",
+          "Label": {
+            "en": "AlprData"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de",
+              "Id": "bc8df00c-0c24-48a3-b14e-4d841c7799de"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f",
+              "Id": "310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttribute:23f80d5a-ea20-351b-8237-2136eaf000bc",
+              "Id": "23f80d5a-ea20-351b-8237-2136eaf000bc",
+              "Offset": 60,
+              "Name": "Candidates",
+              "Label": {
+                "en": "Candidates"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:ec174911-21d6-3ae2-9354-4d22522e4538",
+              "Id": "ec174911-21d6-3ae2-9354-4d22522e4538",
+              "Offset": 10,
+              "Name": "ImageData",
+              "Label": {
+                "en": "Image"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:e10c04af-0b05-341e-9f99-d9339e3ac07c",
+              "Id": "e10c04af-0b05-341e-9f99-d9339e3ac07c",
+              "Offset": 70,
+              "Name": "InDB",
+              "Label": {
+                "en": "in DB"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:b2d0563e-7f16-3c35-afe3-43fc52d8fd53",
+              "Id": "b2d0563e-7f16-3c35-afe3-43fc52d8fd53",
+              "Offset": 20,
+              "Name": "LicensePlate",
+              "Label": {
+                "en": "License plate"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:c0a8c25f-6e42-3bee-b7ed-598fd332e14b",
+              "Id": "c0a8c25f-6e42-3bee-b7ed-598fd332e14b",
+              "Offset": 40,
+              "Name": "Message",
+              "Label": {
+                "en": "Message"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:81a95e48-71b5-3cf0-b22c-4ea36befcbfe",
+              "Id": "81a95e48-71b5-3cf0-b22c-4ea36befcbfe",
+              "Offset": 50,
+              "Name": "Messages",
+              "Label": {
+                "en": "Messages"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:String"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:bc8df00c-0c24-48a3-b14e-4d841c7799de"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:310b1cb9-6995-47de-b1b0-80b77c6d5c5f"
+              }
+            }
+          ],
+          "Queries": []
+        },
+        "8c48c59c-a8a5-3699-a536-c54afe24d725": {
+          "$id": "PersistentObject:8c48c59c-a8a5-3699-a536-c54afe24d725",
+          "SchemaName": "AlprApp",
+          "Type": "Car",
+          "Salt": "L8_Ju61IkTi2_e9C_ovMU8SwIqXUL5X768HhvbgQg2Q",
+          "Breadcrumb": "{CompanyID}",
+          "ContextProperty": "Cars",
+          "Label": {
+            "en": "Car"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:81d256a0-1cd1-4458-bbcb-e47dc5a13cd8",
+              "Id": "81d256a0-1cd1-4458-bbcb-e47dc5a13cd8"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:2141cd4f-d97c-450c-8dd1-c5b3602c7b2d",
+              "Id": "2141cd4f-d97c-450c-8dd1-c5b3602c7b2d"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttributeWithReference:9164cd03-7d17-3752-9c01-22af63d1af7f",
+              "$type": "Vidyano.Service.Repository.PersistentObjectAttributeWithReference, Vidyano.Service",
+              "DisplayAttribute": "Name",
+              "LookupId": "66993f53-af3e-4d17-b907-acefc4b80463",
+              "Id": "9164cd03-7d17-3752-9c01-22af63d1af7f",
+              "Offset": 10,
+              "Rules": "Required",
+              "Name": "Company",
+              "Label": {
+                "en": "Company"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Reference"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:81d256a0-1cd1-4458-bbcb-e47dc5a13cd8"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:2141cd4f-d97c-450c-8dd1-c5b3602c7b2d"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:75c98c13-d676-38ca-9df6-71d6d25dd777",
+              "Id": "75c98c13-d676-38ca-9df6-71d6d25dd777",
+              "Offset": 20,
+              "Name": "LicensePlate",
+              "Label": {
+                "en": "License plate"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:81d256a0-1cd1-4458-bbcb-e47dc5a13cd8"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:2141cd4f-d97c-450c-8dd1-c5b3602c7b2d"
+              }
+            }
+          ],
+          "Queries": [
+            "0f6d4805-5af9-4877-8414-aea953d02839"
+          ]
+        },
+        "d267c5e6-ebf9-3d05-a0ba-4751dafebaf1": {
+          "$id": "PersistentObject:d267c5e6-ebf9-3d05-a0ba-4751dafebaf1",
+          "SchemaName": "AlprApp",
+          "Type": "Company",
+          "Salt": "v9GpdAaWJehOXnbn3RzFI6X808ahzTEOkK7SIvl2h2M",
+          "Breadcrumb": "{Name}",
+          "ContextProperty": "Companies",
+          "Label": {
+            "en": "Company"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:eefcd847-4e1b-4182-9fb3-74ac06a9fb29",
+              "Id": "eefcd847-4e1b-4182-9fb3-74ac06a9fb29"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:3740e5bc-bb8b-458c-b6cc-cd4c65033ea5",
+              "Id": "3740e5bc-bb8b-458c-b6cc-cd4c65033ea5"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttribute:2d891c2c-3ee7-3ead-8a64-9d3fc5b9049b",
+              "Id": "2d891c2c-3ee7-3ead-8a64-9d3fc5b9049b",
+              "Offset": 10,
+              "Name": "Name",
+              "Label": {
+                "en": "Name"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:eefcd847-4e1b-4182-9fb3-74ac06a9fb29"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3740e5bc-bb8b-458c-b6cc-cd4c65033ea5"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:903c66d2-f289-3f85-947b-e67f7cbaffa0",
+              "Id": "903c66d2-f289-3f85-947b-e67f7cbaffa0",
+              "Offset": 30,
+              "Name": "Number",
+              "Label": {
+                "en": "Number"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:eefcd847-4e1b-4182-9fb3-74ac06a9fb29"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3740e5bc-bb8b-458c-b6cc-cd4c65033ea5"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:cac286a9-6499-325c-b99e-6460274eee2a",
+              "Id": "cac286a9-6499-325c-b99e-6460274eee2a",
+              "Offset": 40,
+              "Name": "PostalCode",
+              "Label": {
+                "en": "Postal code"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:eefcd847-4e1b-4182-9fb3-74ac06a9fb29"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3740e5bc-bb8b-458c-b6cc-cd4c65033ea5"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:77bdefe7-5720-3ce8-8ec5-0f06d370df12",
+              "Id": "77bdefe7-5720-3ce8-8ec5-0f06d370df12",
+              "Offset": 20,
+              "Name": "Street",
+              "Label": {
+                "en": "Street"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:eefcd847-4e1b-4182-9fb3-74ac06a9fb29"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3740e5bc-bb8b-458c-b6cc-cd4c65033ea5"
+              }
+            }
+          ],
+          "Queries": [
+            "6b0c439b-a98f-465e-9a6e-e5c4d098f695"
+          ]
+        },
+        "5abe028c-d61a-383f-9714-800db41816ba": {
+          "$id": "PersistentObject:5abe028c-d61a-383f-9714-800db41816ba",
+          "SchemaName": "AlprApp",
+          "Type": "Message",
+          "Salt": "SM9j_nfSnpoeUVK82Rs7ZsciAqzXN2ppOFAhToHgnnk",
+          "Breadcrumb": "{PersonCarID}",
+          "ContextProperty": "Messages",
+          "Label": {
+            "en": "Message"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:2337da24-0d0f-486a-9bd1-92ad85e5397a",
+              "Id": "2337da24-0d0f-486a-9bd1-92ad85e5397a"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:65745da6-7de9-486b-ad8f-7b1647e3e4fd",
+              "Id": "65745da6-7de9-486b-ad8f-7b1647e3e4fd"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttributeWithReference:bf49c48e-385c-3c05-9c4d-c2abb2871216",
+              "$type": "Vidyano.Service.Repository.PersistentObjectAttributeWithReference, Vidyano.Service",
+              "DisplayAttribute": "CarID",
+              "LookupId": "54fd1386-46ad-4122-9fca-d85d83419e6e",
+              "Id": "bf49c48e-385c-3c05-9c4d-c2abb2871216",
+              "Offset": 10,
+              "Rules": "Required",
+              "Name": "PersonCar",
+              "Label": {
+                "en": "Person car"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Reference"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:2337da24-0d0f-486a-9bd1-92ad85e5397a"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:65745da6-7de9-486b-ad8f-7b1647e3e4fd"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttributeWithReference:39facf87-daf6-328e-b160-c011d4b93876",
+              "$type": "Vidyano.Service.Repository.PersistentObjectAttributeWithReference, Vidyano.Service",
+              "DisplayAttribute": "Text",
+              "LookupId": "5eaadf44-b377-4b61-bb78-8cacb0ec75f2",
+              "Id": "39facf87-daf6-328e-b160-c011d4b93876",
+              "Offset": 20,
+              "Name": "PremadeMessage",
+              "Label": {
+                "en": "Premade message"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Reference"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:2337da24-0d0f-486a-9bd1-92ad85e5397a"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:65745da6-7de9-486b-ad8f-7b1647e3e4fd"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:156e3afb-71ac-359e-ad23-f89f6e6e6a38",
+              "Id": "156e3afb-71ac-359e-ad23-f89f6e6e6a38",
+              "Offset": 30,
+              "Name": "Text",
+              "Label": {
+                "en": "Text"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:2337da24-0d0f-486a-9bd1-92ad85e5397a"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:65745da6-7de9-486b-ad8f-7b1647e3e4fd"
+              }
+            }
+          ],
+          "Queries": []
+        },
+        "645a9601-cf0c-3160-974d-69ed5e6b5d70": {
+          "$id": "PersistentObject:645a9601-cf0c-3160-974d-69ed5e6b5d70",
+          "SchemaName": "AlprApp",
+          "Type": "Person",
+          "Salt": "oIDKSvCcIGeFD39J4dRYfNgaQwkTCwitowc0eiTU5-M",
+          "Breadcrumb": "{Email}",
+          "ContextProperty": "Persons",
+          "Label": {
+            "en": "Person"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:dcfb62a0-dcb7-47ce-adfc-4893c0f623be",
+              "Id": "dcfb62a0-dcb7-47ce-adfc-4893c0f623be"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:3f5687c1-6c73-4c33-9fb3-198767119fb1",
+              "Id": "3f5687c1-6c73-4c33-9fb3-198767119fb1"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttribute:e3d15c1d-4285-3e05-9b3b-7d70e9e184d1",
+              "Id": "e3d15c1d-4285-3e05-9b3b-7d70e9e184d1",
+              "Offset": 30,
+              "Rules": "IsEmail",
+              "Name": "Email",
+              "Label": {
+                "en": "Email"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:dcfb62a0-dcb7-47ce-adfc-4893c0f623be"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3f5687c1-6c73-4c33-9fb3-198767119fb1"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:91699372-5c64-3156-be1c-fe737db53a91",
+              "Id": "91699372-5c64-3156-be1c-fe737db53a91",
+              "Offset": 10,
+              "Name": "FristName",
+              "Label": {
+                "en": "Frist name"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:dcfb62a0-dcb7-47ce-adfc-4893c0f623be"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3f5687c1-6c73-4c33-9fb3-198767119fb1"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:eae9f092-2529-32f6-8edf-315e2d9f8610",
+              "Id": "eae9f092-2529-32f6-8edf-315e2d9f8610",
+              "Offset": 20,
+              "Name": "LastName",
+              "Label": {
+                "en": "Last name"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:dcfb62a0-dcb7-47ce-adfc-4893c0f623be"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:3f5687c1-6c73-4c33-9fb3-198767119fb1"
+              }
+            }
+          ],
+          "Queries": [
+            "3a29e6b7-c714-4f12-856c-267ff49189d3"
+          ]
+        },
+        "2e716f31-059c-3b04-b4c8-0185604eab14": {
+          "$id": "PersistentObject:2e716f31-059c-3b04-b4c8-0185604eab14",
+          "SchemaName": "AlprApp",
+          "Type": "PersonCar",
+          "Salt": "tB3gMQ_y7LcCfgbgce-rS7CHymLKxjz5YCe8YoGpcJE",
+          "Breadcrumb": "{CarID}",
+          "ContextProperty": "PersonCars",
+          "Label": {
+            "en": "Person car"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:54421b19-85f4-4dd7-bf75-ed09471716f2",
+              "Id": "54421b19-85f4-4dd7-bf75-ed09471716f2"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c",
+              "Id": "bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttributeWithReference:c6eeb5f5-d01e-32b9-bd8a-6486315f8a05",
+              "$type": "Vidyano.Service.Repository.PersistentObjectAttributeWithReference, Vidyano.Service",
+              "DisplayAttribute": "Company",
+              "LookupId": "541523ff-4e95-4fdc-9ddb-bbee820117f8",
+              "Id": "c6eeb5f5-d01e-32b9-bd8a-6486315f8a05",
+              "Offset": 20,
+              "Rules": "Required",
+              "Name": "Car",
+              "Label": {
+                "en": "Car"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Reference"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:54421b19-85f4-4dd7-bf75-ed09471716f2"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:74af5d59-4087-3e8f-83e7-cec6023ab160",
+              "Id": "74af5d59-4087-3e8f-83e7-cec6023ab160",
+              "Offset": 40,
+              "Rules": "Required",
+              "Name": "EndDate",
+              "Label": {
+                "en": "End date"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Date"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:54421b19-85f4-4dd7-bf75-ed09471716f2"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttributeWithReference:969c5234-b789-372f-9fcd-c2ea97374cd2",
+              "$type": "Vidyano.Service.Repository.PersistentObjectAttributeWithReference, Vidyano.Service",
+              "DisplayAttribute": "Email",
+              "LookupId": "26f175c1-d733-4d42-b3c1-c5e19a44ec9a",
+              "Id": "969c5234-b789-372f-9fcd-c2ea97374cd2",
+              "Offset": 10,
+              "Rules": "Required",
+              "Name": "Person",
+              "Label": {
+                "en": "Person"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Reference"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:54421b19-85f4-4dd7-bf75-ed09471716f2"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c"
+              }
+            },
+            {
+              "$id": "PersistentObjectAttribute:6c97d52d-1cc3-3cde-9bc5-e458fd68beae",
+              "Id": "6c97d52d-1cc3-3cde-9bc5-e458fd68beae",
+              "Offset": 30,
+              "Rules": "Required",
+              "Name": "StartDate",
+              "Label": {
+                "en": "Start date"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:Date"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:54421b19-85f4-4dd7-bf75-ed09471716f2"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:bd6a5b11-6743-4e7b-bcba-cd6bb35c6d7c"
+              }
+            }
+          ],
+          "Queries": [
+            "1856b942-41aa-4e7f-9b94-d64328bf2264"
+          ]
+        },
+        "4fab5fef-d695-3177-9d24-534be232991f": {
+          "$id": "PersistentObject:4fab5fef-d695-3177-9d24-534be232991f",
+          "SchemaName": "AlprApp",
+          "Type": "PremadeMessage",
+          "Salt": "R5h7LviFKArqFcWg1PHjruDiyE8Iqwa6e4c79HX6h3g",
+          "Breadcrumb": "{Text}",
+          "ContextProperty": "PremadeMessages",
+          "Label": {
+            "en": "Premade message"
+          },
+          "Groups": [
+            {
+              "$id": "PersistentObjectAttributeGroup:91c649f1-1948-4e46-a090-2cf0983485d7",
+              "Id": "91c649f1-1948-4e46-a090-2cf0983485d7"
+            }
+          ],
+          "Tabs": [
+            {
+              "$id": "PersistentObjectAttributeTab:b2f2ec58-1bfa-4db6-82ae-022c93548e77",
+              "Id": "b2f2ec58-1bfa-4db6-82ae-022c93548e77"
+            }
+          ],
+          "Attributes": [
+            {
+              "$id": "PersistentObjectAttribute:97a9a651-9aaa-369a-9a3f-0651340cfd86",
+              "Id": "97a9a651-9aaa-369a-9a3f-0651340cfd86",
+              "Offset": 10,
+              "Name": "Text",
+              "Label": {
+                "en": "Text"
+              },
+              "Visibility": 7,
+              "ColumnSpan": 1,
+              "DataType": {
+                "$ref": "DataType:MultiLineString"
+              },
+              "Group": {
+                "$ref": "PersistentObjectAttributeGroup:91c649f1-1948-4e46-a090-2cf0983485d7"
+              },
+              "Tab": {
+                "$ref": "PersistentObjectAttributeTab:b2f2ec58-1bfa-4db6-82ae-022c93548e77"
+              }
+            }
+          ],
+          "Queries": []
+        }
+      },
+      "Queries": {
+        "0f6d4805-5af9-4877-8414-aea953d02839": {
+          "$id": "Query:0f6d4805-5af9-4877-8414-aea953d02839",
+          "Offset": 10,
+          "Source": "PersonCars",
+          "AutoQuery": true,
+          "Name": "Car_PersonCars",
+          "Label": {
+            "en": "Person cars"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:2e716f31-059c-3b04-b4c8-0185604eab14"
+          },
+          "Columns": []
+        },
+        "1856b942-41aa-4e7f-9b94-d64328bf2264": {
+          "$id": "Query:1856b942-41aa-4e7f-9b94-d64328bf2264",
+          "Offset": 10,
+          "Source": "Messages",
+          "AutoQuery": true,
+          "Name": "PersonCar_Messages",
+          "Label": {
+            "en": "Messages"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:5abe028c-d61a-383f-9714-800db41816ba"
+          },
+          "Columns": []
+        },
+        "26f175c1-d733-4d42-b3c1-c5e19a44ec9a": {
+          "$id": "Query:26f175c1-d733-4d42-b3c1-c5e19a44ec9a",
+          "Source": "Database.Persons",
+          "AutoQuery": true,
+          "Name": "Persons",
+          "Label": {
+            "en": "Persons"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:645a9601-cf0c-3160-974d-69ed5e6b5d70"
+          },
+          "Columns": []
+        },
+        "3a29e6b7-c714-4f12-856c-267ff49189d3": {
+          "$id": "Query:3a29e6b7-c714-4f12-856c-267ff49189d3",
+          "Offset": 10,
+          "Source": "PersonCar",
+          "AutoQuery": true,
+          "Name": "Person_PersonCar",
+          "Label": {
+            "en": "Person car"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:2e716f31-059c-3b04-b4c8-0185604eab14"
+          },
+          "Columns": []
+        },
+        "541523ff-4e95-4fdc-9ddb-bbee820117f8": {
+          "$id": "Query:541523ff-4e95-4fdc-9ddb-bbee820117f8",
+          "Source": "Database.Cars",
+          "AutoQuery": true,
+          "Name": "Cars",
+          "Label": {
+            "en": "Cars"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:8c48c59c-a8a5-3699-a536-c54afe24d725"
+          },
+          "Columns": []
+        },
+        "54fd1386-46ad-4122-9fca-d85d83419e6e": {
+          "$id": "Query:54fd1386-46ad-4122-9fca-d85d83419e6e",
+          "Source": "Database.PersonCars",
+          "AutoQuery": true,
+          "Name": "PersonCars",
+          "Label": {
+            "en": "Person cars"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:2e716f31-059c-3b04-b4c8-0185604eab14"
+          },
+          "Columns": []
+        },
+        "5eaadf44-b377-4b61-bb78-8cacb0ec75f2": {
+          "$id": "Query:5eaadf44-b377-4b61-bb78-8cacb0ec75f2",
+          "Source": "Database.PremadeMessages",
+          "AutoQuery": true,
+          "Name": "PremadeMessages",
+          "Label": {
+            "en": "Premade messages"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:4fab5fef-d695-3177-9d24-534be232991f"
+          },
+          "Columns": []
+        },
+        "66993f53-af3e-4d17-b907-acefc4b80463": {
+          "$id": "Query:66993f53-af3e-4d17-b907-acefc4b80463",
+          "Source": "Database.Companies",
+          "AutoQuery": true,
+          "Name": "Companies",
+          "Label": {
+            "en": "Companies"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:d267c5e6-ebf9-3d05-a0ba-4751dafebaf1"
+          },
+          "Columns": []
+        },
+        "6b0c439b-a98f-465e-9a6e-e5c4d098f695": {
+          "$id": "Query:6b0c439b-a98f-465e-9a6e-e5c4d098f695",
+          "Offset": 10,
+          "Source": "Cars",
+          "AutoQuery": true,
+          "Name": "Company_Cars",
+          "Label": {
+            "en": "Cars"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:8c48c59c-a8a5-3699-a536-c54afe24d725"
+          },
+          "Columns": []
+        },
+        "da53d933-d4ab-4db4-8085-be6664699fce": {
+          "$id": "Query:da53d933-d4ab-4db4-8085-be6664699fce",
+          "Source": "Database.Messages",
+          "AutoQuery": true,
+          "Name": "Messages",
+          "Label": {
+            "en": "Messages"
+          },
+          "PersistentObject": {
+            "$ref": "PersistentObject:5abe028c-d61a-383f-9714-800db41816ba"
+          },
+          "Columns": []
+        }
+      }
+    }
+  },
+  "ProgramUnits": [
+    {
+      "Name": "Home",
+      "Title": {
+        "en": "Home"
+      },
+      "Groups": [],
+      "Items": [
+        {
+          "Offset": 10,
+          "Title": {
+            "en": "Companies"
+          },
+          "Name": "Companies",
+          "Query": {
+            "$ref": "Query:66993f53-af3e-4d17-b907-acefc4b80463"
+          }
+        },
+        {
+          "Offset": 20,
+          "Title": {
+            "en": "Cars"
+          },
+          "Name": "Cars",
+          "Query": {
+            "$ref": "Query:541523ff-4e95-4fdc-9ddb-bbee820117f8"
+          }
+        },
+        {
+          "Offset": 30,
+          "Title": {
+            "en": "Messages"
+          },
+          "Name": "Messages",
+          "Query": {
+            "$ref": "Query:da53d933-d4ab-4db4-8085-be6664699fce"
+          }
+        },
+        {
+          "Offset": 40,
+          "Title": {
+            "en": "Person cars"
+          },
+          "Name": "PersonCars",
+          "Query": {
+            "$ref": "Query:54fd1386-46ad-4122-9fca-d85d83419e6e"
+          }
+        },
+        {
+          "Offset": 50,
+          "Title": {
+            "en": "Persons"
+          },
+          "Name": "Persons",
+          "Query": {
+            "$ref": "Query:26f175c1-d733-4d42-b3c1-c5e19a44ec9a"
+          }
+        },
+        {
+          "Offset": 60,
+          "Title": {
+            "en": "Premade messages"
+          },
+          "Name": "PremadeMessages",
+          "Query": {
+            "$ref": "Query:5eaadf44-b377-4b61-bb78-8cacb0ec75f2"
+          }
+        }
+      ]
+    }
+  ],
+  "Reports": [],
+  "ServiceVersion": "6.0.0-alpha",
+  "ModelHash": "NCJxEE8yL+rloUZ3wOQC4V3O6ZwRtodiLaU1BBtFJas=",
+  "SeederHash": "oihF/17Hwdfd14kOY+dzNUFpjJv6IVWJ9PKd3N3RQco="
+}

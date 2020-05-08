@@ -1,0 +1,55 @@
+{
+  "Groups": {},
+  "Rights": [
+    {
+      "Id": "cf9509bf-9720-4b7f-845b-63d13902f785",
+      "Resource": "Delete/AlprApp.AlprData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "2a0a18ec-dde9-4f60-a94a-6f83d5baf299",
+      "Resource": "Delete/AlprApp.TemplateData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "13d81cd2-4b6e-47ad-a5d7-618cf9608327",
+      "Resource": "Edit/AlprApp.TemplateData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "a4e7c5cf-4aa8-429f-9b40-8dce31149845",
+      "Resource": "New/AlprApp.TemplateData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "5bb8fd1f-3b44-4570-bbd9-e96ef0a92ac2",
+      "Resource": "ProcessImage/AlprApp.AlprData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "1f9b31fe-3518-45d2-97db-90036daf8f5e",
+      "Resource": "ProcessImage/AlprApp.TemplateData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "8791d8c8-a4bf-427c-8e62-6b898cfd7598",
+      "Resource": "Query/AlprApp",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "4cdebdcb-b562-4cbd-90f3-821050cc7560",
+      "Resource": "QueryReadEditNew/AlprApp.AlprData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "3bb5ffec-1d02-45b4-be04-ad37bb831b81",
+      "Resource": "Read/AlprApp.TemplateData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    },
+    {
+      "Id": "ed98a890-44fb-41c1-bb75-a25e818a495d",
+      "Resource": "SendMessage/AlprApp.AlprData",
+      "UserId": "d3bd3312-0730-43d9-9bf4-9e14c75b00f7"
+    }
+  ]
+}

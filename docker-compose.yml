@@ -1,0 +1,24 @@
+﻿version: "3"
+services:
+    ms-sql-server:
+        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+        environment:
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "rR1234-56!"
+            MSSQL_PID: Express
+        ports: 
+            - "1433:1433"
+    plate-api:
+        build: PlateAPI/.
+        ports:
+            - "5000:5000"
+    alpr-app:
+        build: AlprApp/.
+        ports:
+            - "5001:5001"
+            - "5002:443"
+        environment:
+            DBServer: "ms-sql-server"
+            DBPort: '1433'
+            Database: "AlprApp"
+            

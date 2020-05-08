@@ -1,0 +1,125 @@
+﻿<dom-module id="aa-alpr-data">
+    <template>
+        <link rel="stylesheet" href="alpr-data.css" />
+
+        <!--HIER STARTEN MET BODY-->
+
+
+        <div class="fullWidth">
+            <div class="container">
+                <div class="my-4">
+                    <form-signin class="align-baseline">
+                        <div class="text-center mb-4 ">
+                            <img class="mb-4" src="Rhea_nv.png" alt="logo rhea nv" width="72" height="72">
+                            <h1 class="h3 mb-3 font-weight-normal">Rhea N.V. - Parking problemen</h1>
+                            <p>Selecteer Het probleem of schrijf zelf een opmerking. Trek daarna een foto van de nummerplaat en verifieer dat deze juist is. Als alles ingevuld is, klik dan op verzenden.</p>
+                            <!--<p>Klik op de knop hieronder om een foto te trekken van een nummerplaat. Vul vervolgens een melding in met wat het probleem is en klik op verzenden.</p>-->
+                        </div>
+
+                        <!----------------------->
+                        <!-- Dropdown Probleem -->
+                        <!----------------------->
+                        <label for="exampleFormControlSelect1">Selecteer een opmerking.</label>
+                        <select class="form-control" id="problemDropdown" on-change="_setValueDropdown">
+
+                            <option id="zelf" value="0">Ik schrijf zelf een melding...</option>
+                            <template is="dom-repeat" items="{{messages}}" as="message">
+                                <option value="[[message.id]]">[[message.text]]</option>
+
+                            </template>
+                        </select>
+                        <div class="form-group">
+
+                        </div>
+
+                        <!---------------------->
+                        <!-- TextArea Melding -->
+                        <!---------------------->
+                        <template is="dom-if" if="[[writeOwnMessage]]">
+                            <textarea class="form-control mb-3" id="inputSelfWrittenMelding" value="{{alprDataPo.attributes.Message.value}}" on-change="_setMessage" placeholder="Typ hier uw eigen melding"></textarea>
+
+                            <template is="dom-if" if="[[messageEmptyAfterSend]]">
+                                <div class="text-danger mb-3">Vul een melding in!</div>
+                            </template>
+                        </template>
+
+                        <div class="row">
+                            <div class="col-6" on-tap="_videoCaptured">
+
+                                <!------------------->
+                                <!-- IMAGE UPLOADS -->
+                                <!------------------->
+                                <!--<input id="file" type="file" accept="video/*" capture="camcorder">-->
+                                <!--<input id="file" type="file" accept="image/*" capture="camera">-->
+                                <label for="fileUpload" class="custom-fileUpload vc-prepare childDiv">
+                                    <i class="material-icons md-18 mr-3 vertical-center">cloud_upload</i>Neem een foto
+                                </label>
+                                <!--<input id="fileUpload" type="file" accept="video/*" capture="camcorder" on-change="_videoCaptured" />-->
+                                <!--<input id="fileUpload" type="file" accept="image/*" capture="camera" on-change="_imageCaptured" />-->
+                            </div>
+                            <video id="vid" class="col-6 mb-3" autoplay></video>
+                            <div id="image-holder" class="col-12">
+                                <!-- <video autoplay style="display:none"></video> -->
+                                <img src="" id="screenshot" class="thumb-image img-fluid" on-change="_sendImageToAPI" />
+                            </div>
+                                
+                        </div>
+                        <!----------------->
+                        <!-- LicensePlate-->
+                        <!----------------->
+                        <template is="dom-if" if="[[plateEmptyAfterSend]]">
+                            <div class="text-danger my-3 text-center">Trek een goede foto van een nummerplaat!</div>
+                        </template>
+                        <template is="dom-if" if="[[trueAfterPictureUpload]]">
+                            <div class="mt-3 text-center">
+                                <div class="text-center">
+                                    Is de nummerplaat correct?
+                                    <template is="dom-if" if="[[!plateEmptyAfterSend]]">
+                                        <a data-toggle="collapse" href="#Candidates" role="button" aria-expanded="false" aria-controls="Candidates">
+                                            Toon alternatieven.
+                                        </a>
+                                    </template>
+                                </div>
+                                <div id="licensePlate" class="badge badge-info mt-2"></div>
+
+
+                                <!--------------->
+                                <!-- Candidates-->
+                                <!--------------->
+                                <div class="collapse" id="Candidates">
+                                    <div class="row ml-1 mt-3">
+                                        <template is="dom-if" if="[[showCandidates]]">
+                                            <template is="dom-repeat" items="{{candidates}}" as="candidate">
+
+                                                <div class="list-group text-center col-sm-6 col-md-3">
+                                                    <div class="list-group-item list-group-item-action list list-group-item-primary" on-tap="_setPlate" data-item$="[[candidate]]">
+                                                        {{candidate}}
+                                                    </div>
+                                                </div>
+
+                                            </template>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+
+
+
+
+                        <!----------------->
+                        <!-- Button next -->
+                        <!----------------->
+                        <button id="send" class="btn btn-lg btn-warning btn-block mt-3 mb-3" on-tap="_sendForm">
+                            Verstuur
+                        </button>
+
+                        <p class="mt-5 mb-3 text-muted text-center">&copy; Maarten Michiels</p>
+                    </form-signin>
+                </div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+<script src="alpr-data.js"></script>

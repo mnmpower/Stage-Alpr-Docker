@@ -1,0 +1,21 @@
+:host {
+    body {
+        height: 100vh;
+        background-color: #fcfcfc;
+    }
+
+    .fullWidth {
+        width: 100vw;
+    }
+
+    .backgroudnImage {
+        background-image: url(/Resources/send_mail.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .fullHeight {
+        height: 80vh;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,KADC,CACD,IAAI,CAAC;EACD,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAO;CAC5B;;AAJL,AAMI,KANC,CAMD,UAAU,CAAC;EACP,KAAK,EAAE,KAAK;CACf;;AARL,AAUI,KAVC,CAUD,gBAAgB,CAAC;EACb,gBAAgB,EAAE,6BAA6B;EAC/C,iBAAiB,EAAE,SAAS;EAC5B,mBAAmB,EAAE,aAAa;EAClC,eAAe,EAAE,KAAK;CACzB;;AAfL,AAiBI,KAjBC,CAiBD,WAAW,CAAC;EACR,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "confirmation.scss"
+    ],
+    "names": [],
+    "file": "confirmation.css"
+}

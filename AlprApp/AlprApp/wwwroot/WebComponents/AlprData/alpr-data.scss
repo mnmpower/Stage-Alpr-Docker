@@ -1,0 +1,56 @@
+:host {
+    body {
+        height: 100vh;
+        background-color: #fcfcfc;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload {
+        border: 2px solid black;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+    .vertical-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .vc-prepare {
+        position: relative;
+        min-height: 150px;
+        width: 45vw;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .childDiv {
+        display: inline-block;
+        width: 100%;
+    }
+
+    textarea {
+        max-height: 100px;
+        min-height: 100px;
+    }
+
+    .fullWidth {
+        width: 100vw;
+    }
+
+    .badge{
+       font-size: 25px;
+    }
+
+    #vid{
+        border: 2px solid black;
+    }
+    
+}
