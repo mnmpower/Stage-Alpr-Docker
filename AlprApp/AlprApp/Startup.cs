@@ -14,6 +14,7 @@ using Vidyano.Service;
 using Vidyano.Service.EntityFrameworkCore;
 using AlprApp.Service;
 using AlprApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AlprApp
 {
@@ -58,6 +59,9 @@ namespace AlprApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+
             services.AddVidyanoEntityFrameworkCore(Configuration);
             // ------------OOSPRONGEKLIJKE DB CONNECTIE--------------
             // services.AddDbContext<AlprAppContext>(options =>
@@ -85,6 +89,15 @@ namespace AlprApp
             // Add framework services.
             services.Configure<SmtpSettings>(SmtpSettings => Configuration.GetSection("SmtpSettings").Bind(SmtpSettings));
 
+            // services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            // {
+            //     builder.AllowAnyOrigin()
+            //             .AllowAnyMethod()
+            //             .AllowAnyHeader();
+            // }));
+
+            // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -93,9 +106,18 @@ namespace AlprApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }else
+            {
+                app.UseExceptionHandler("/Error");
+                // app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            // app.UseCors("MyPolicy");
+
             app.UseVidyano(env, Configuration);
 
             PrepDB.PrepareDB(app);

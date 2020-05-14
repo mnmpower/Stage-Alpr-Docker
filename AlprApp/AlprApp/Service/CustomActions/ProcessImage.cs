@@ -22,6 +22,8 @@ namespace AlprApp.Service.CustomActions
 
         public override PersistentObject Execute(CustomActionArgs e)
         {
+            
+            Console.WriteLine("IN PROCES IMAGE");
             //declaration objects
             AlprReturn alprReturn = new AlprReturn();
             AlprWithHeader alprWithHeader = new AlprWithHeader();
@@ -58,8 +60,8 @@ namespace AlprApp.Service.CustomActions
 
                 //making API call
                 var content = new StringContent(JsonString, Encoding.UTF8, "application/json");
-                //var result = client.PostAsync("http://192.168.99.100:5000/plate/identify", content).Result;
-                var result = client.PostAsync("http://plate-api:5000/plate/identify", content).Result;
+                var result = client.PostAsync("http://192.168.99.100:5000/plate/identify", content).Result;
+                //var result = client.PostAsync("http://plate-api:5000/plate/identify", content).Result;
 
 
                 //reading result out as string.

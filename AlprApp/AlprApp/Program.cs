@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -15,8 +16,17 @@ namespace AlprApp
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-        }
+            // var host = new WebHostBuilder()
+            //             .UseKestrel()
+            //             .UseContentRoot(Directory.GetCurrentDirectory())
+            //             .UseIISIntegration()
+            //             .UseStartup<Startup>()
+            //             .UseUrls("http://localhost:5001") //HIER AANPASSEN NAAR HTTP en dan zou het meoten werken
+            //             .Build();
 
+            // host.Run();
+        }
+ 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureLogging(logging =>
