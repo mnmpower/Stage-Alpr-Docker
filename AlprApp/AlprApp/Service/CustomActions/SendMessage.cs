@@ -11,6 +11,8 @@ using static AlprApp.Service.Actions.CarActions;
 using Microsoft.EntityFrameworkCore;
 using AlprApp.Models;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace AlprApp.Service.CustomActions
 {
@@ -18,10 +20,10 @@ namespace AlprApp.Service.CustomActions
     {
 
         private readonly SmtpSettings _smtpSettings;
-        private SendMessage(IOptions<SmtpSettings> smtpSettings)
-        {
-            _smtpSettings = smtpSettings.Value;
-        }
+        // private SendMessage(IOptions<SmtpSettings> smtpSettings)
+        // {
+        //     _smtpSettings = smtpSettings.Value;
+        // }
 
         public override PersistentObject Execute(CustomActionArgs e)
         {
@@ -89,22 +91,59 @@ namespace AlprApp.Service.CustomActions
                     Context.Messages.Add(message);
                     Context.SaveChangesAsync();
 
+// NIEW
+                    string jsonString = File.ReadAllText("customSettings.json");
+                    JObject jObject = Newtonsoft.Json.JsonConvert.DeserializeObject(jsonString) as JObject;
+                    JToken JSmtpClient = jObject.SelectToken("SmtpSettings.SmtpClient");
+                    JToken JSmtpPort = jObject.SelectToken("SmtpSettings.SmtpPort");
+                    JToken JSmtpEmail = jObject.SelectToken("SmtpSettings.SmtpEmail");
+                    JToken JSmtpPwd = jObject.SelectToken("SmtpSettings.SmtpPwd");
+                    JToken JEmailSubject = jObject.SelectToken("SmtpSettings.EmailSubject");
+                    JToken JEmailBody = jObject.SelectToken("SmtpSettings.EmailBody");
+                    JToken JLogo = jObject.SelectToken("SmtpSettings.Logo");
+
+                    
+                    // // SMTP configuratie
+                    // SmtpClient client = new SmtpClient(_smtpSettings.SmtpClient, _smtpSettings.SmtpPort);
+                    // client.UseDefaultCredentials = false;
+                    // client.Credentials = new NetworkCredential(_smtpSettings.SmtpEmail, _smtpSettings.SmtpPwd);
+                    // client.EnableSsl = true;
+
+                    
                     // SMTP configuratie
-                    SmtpClient client = new SmtpClient(_smtpSettings.SmtpClient, _smtpSettings.SmtpPort);
+                    SmtpClient client = new SmtpClient(JSmtpClient.ToString(), Int32.Parse(JSmtpPort.ToString()));
                     client.UseDefaultCredentials = false;
-                    client.Credentials = new NetworkCredential(_smtpSettings.SmtpEmail, _smtpSettings.SmtpPwd);
+                    client.Credentials = new NetworkCredential(JSmtpEmail.ToString(), JSmtpPwd.ToString());
                     client.EnableSsl = true;
+
+
+
+
+                    // //mail voorbereidingen
+                    // string emailTo = employee.Email;
+                    // string subject = _smtpSettings.EmailSubject;
+                    // var logo = _smtpSettings.Logo;
+                    // string body = String.Format(_smtpSettings.EmailBody, employee.FristName, employee.LastName, DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("HH:mm"), PremadeOrSelfWritten, messageInMail, logo);
+
 
                     //mail voorbereidingen
                     string emailTo = employee.Email;
-                    string subject = _smtpSettings.EmailSubject;
-                    var logo = _smtpSettings.Logo;
-                    string body = String.Format(_smtpSettings.EmailBody, employee.FristName, employee.LastName, DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("HH:mm"), PremadeOrSelfWritten, messageInMail, logo);
+                    string subject = JEmailSubject.ToString();
+                    var logo = JLogo.ToString();
+                    string body = String.Format(JEmailBody.ToString(), employee.FristName, employee.LastName, DateTime.Now.ToString("dd/MM/yyyy"), DateTime.Now.ToString("HH:mm"), PremadeOrSelfWritten, messageInMail, logo);
 
+
+                    // //mail Configuratie
+                    // MailMessage mailMessage = new MailMessage();
+                    // mailMessage.From = new MailAddress(_smtpSettings.SmtpEmail);
+                    // mailMessage.To.Add(emailTo);
+                    // mailMessage.IsBodyHtml = true;
+                    // mailMessage.Body = body;
+                    // mailMessage.Subject = subject;
 
                     //mail Configuratie
                     MailMessage mailMessage = new MailMessage();
-                    mailMessage.From = new MailAddress(_smtpSettings.SmtpEmail);
+                    mailMessage.From = new MailAddress(JSmtpEmail.ToString());
                     mailMessage.To.Add(emailTo);
                     mailMessage.IsBodyHtml = true;
                     mailMessage.Body = body;

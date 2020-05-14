@@ -98,6 +98,7 @@ namespace AlprApp.WebComponents {
 
 
         private async _sendForm(e: Event) {
+            console.log("1");
             // Hier iets doen als ze op verzenden klikken.
             var optionOfMessage = ""
             var textarea = (document.getElementById("inputSelfWrittenMelding")) as HTMLSelectElement;
@@ -177,7 +178,7 @@ namespace AlprApp.WebComponents {
         private _setMessage() {
             this.alprDataPo.beginEdit();
             var textarea = (document.getElementById("inputSelfWrittenMelding")) as HTMLSelectElement;
-            this.alprDataPo.setAttributeValue("Message", textarea.value);
+            this.alprDataPo.setAttributeValue("Message", textarea.value + "");
 
             this._ValidateTextArea(textarea.value);
         }
@@ -245,76 +246,73 @@ namespace AlprApp.WebComponents {
             //Permissions vragen voor cameras
             (async () => {
                 await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-                console.log("NA DE AWAIT");
            
-
-                console.log('na de na de await')
                 //Environment camera aanspreken indien aanwezig
                 navigator.mediaDevices.enumerateDevices()
                     .then(devices => {
                     
-                        console.log("voor camera de device logs ");
                         let videoDevices = [];
                         let videoDeviceID = "";
                         devices.forEach(device => {
                             console.log(device.kind + ": " + device.label +
                                 " id = " + device.deviceId);
-                            console.log("WTF?");
                             if (device.kind == "videoinput") {
                                 videoDevices.push(device.deviceId);
                             }
                         });
-                        console.log("voor camera aansprken ");
                         if (videoDevices.length == 1) {
                             videoDeviceID = videoDevices[0]
                         } else if (videoDevices.length == 2) {
                             videoDeviceID = videoDevices[1]
                         }
-                        console.log("na camera aanspreken");
 
                         const constraints = {
                             width: { ideal: 480, max: 3120, },
                             height: { ideal: 640, max: 4160 },
                             deviceId: { exact: videoDeviceID }
                         };
-                        console.log("na constraints");
                         return navigator.mediaDevices.getUserMedia({ video: constraints });
-                        console.log("na return ");
                     }) //promise zetten op pas door te gaan als de camera actief is
                     .then((stream) => { video.srcObject = stream; return new Promise(resolve => video.onplaying = resolve); }) 
                     .then(() => mainLoopId = setInterval(_screenshotVideo, 500)) // foto interval starten
                     .catch(e => console.error(e));
-                    console.log("2");
                     this.alprDataPo.beginEdit();
                 })();
-            console.log('na de async functie die niet awaited is')
             //functie aanroepen als de foto wordt veranderd
             document.getElementById("screenshot").addEventListener(
                 "load",
                 async function _sendImageToAPI() {
-                    console.log("3");
                     //stoppen met nieuwe fotos te nemen
                     clearInterval(mainLoopId);
 
-                    console.log("4");
                     //image op PO zetten
                     await tempThis.alprDataPo.setAttributeValue("ImageData", tempThis.imageFromCamera);
 
-                    console.log("5");
                     //custom action aanroepen
                     var returnedPO = await tempThis.alprDataPo.getAction("ProcessImage").execute();
 
-                    console.log("6");
                     //waardes terug ophalen van de custiom action
                     tempThis.$$("#licensePlate").innerText = returnedPO.getAttributeValue("LicensePlate") as string;
                     tempThis.alprDataPo.setAttributeValue("LicensePlate", returnedPO.getAttributeValue("LicensePlate"));
 
-                    console.log("7");
                     //indien plate niet valie is nieuwe foto maken en deze functie stoppen
                     if (!tempThis._isPlateValide()) {
                         mainLoopId = setInterval(_screenshotVideo, 500)
                         return
                     }
+
+                    // CAMERA STOPPEN???
+                    console.log("stap1")
+                    video.pause;
+                    video.src=null;
+                    
+                    console.log("stap2");
+                    (<MediaStream>video.srcObject).getTracks().forEach( stream => 
+                        stream.stop(),
+                        console.log("stopped stream")
+                    );
+
+                    console.log("stap3");
 
                     tempThis.alprDataPo.setAttributeValue("InDB", returnedPO.getAttributeValue("InDB"));
                     var candidatesString = returnedPO.getAttributeValue("Candidates") as string;
