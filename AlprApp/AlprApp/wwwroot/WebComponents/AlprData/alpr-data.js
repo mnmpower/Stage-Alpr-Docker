@@ -53,6 +53,7 @@ var AlprApp;
                     return __generator(this, function (_a) {
                         switch (_a.label) {
                             case 0:
+                                console.log("1");
                                 optionOfMessage = "";
                                 textarea = (document.getElementById("inputSelfWrittenMelding"));
                                 dropdown = (document.getElementById("problemDropdown"));
@@ -125,7 +126,7 @@ var AlprApp;
             AlprData.prototype._setMessage = function () {
                 this.alprDataPo.beginEdit();
                 var textarea = (document.getElementById("inputSelfWrittenMelding"));
-                this.alprDataPo.setAttributeValue("Message", textarea.value);
+                this.alprDataPo.setAttributeValue("Message", textarea.value + "");
                 this._ValidateTextArea(textarea.value);
             };
             // nakijken of er een melding geschreven is en deze niet gewoon een spatie is.
@@ -188,10 +189,9 @@ var AlprApp;
                 (function () { return __awaiter(_this, void 0, void 0, function () {
                     return __generator(this, function (_a) {
                         switch (_a.label) {
-                            case 0: return [4 /*yield*/, navigator.mediaDevices.getUserMedia({ audio: true, video: true })];
+                            case 0: return [4 /*yield*/, navigator.mediaDevices.getUserMedia({ audio: false, video: true })];
                             case 1:
                                 _a.sent();
-                                console.log("NA DE AWAIT");
                                 //Environment camera aanspreken indien aanwezig
                                 navigator.mediaDevices.enumerateDevices()
                                     .then(function (devices) {
@@ -250,6 +250,14 @@ var AlprApp;
                                         mainLoopId = setInterval(_screenshotVideo, 500);
                                         return [2 /*return*/];
                                     }
+                                    // CAMERA STOPPEN???
+                                    console.log("stap1");
+                                    video.srcObject.getTracks().forEach(function (stream) {
+                                        return stream.stop();
+                                    }, console.log("stopped stream"));
+                                    console.log("stap2");
+                                    video.srcObject = null;
+                                    console.log("stap3");
                                     tempThis.alprDataPo.setAttributeValue("InDB", returnedPO.getAttributeValue("InDB"));
                                     candidatesString = returnedPO.getAttributeValue("Candidates");
                                     candidates = candidatesString.split(';');

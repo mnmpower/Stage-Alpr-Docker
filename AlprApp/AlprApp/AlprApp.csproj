@@ -21,7 +21,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="System.Resources.Extensions" Version="4.7.0" />
     <PackageReference Include="Vidyano.Service.EntityFrameworkCore" Version="6.0.20200423.1607-alpha1" />
   </ItemGroup>
 

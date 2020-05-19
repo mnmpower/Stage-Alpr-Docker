@@ -98,6 +98,7 @@ namespace AlprApp.WebComponents {
 
 
         private async _sendForm(e: Event) {
+            console.log("1");
             // Hier iets doen als ze op verzenden klikken.
             var optionOfMessage = ""
             var textarea = (document.getElementById("inputSelfWrittenMelding")) as HTMLSelectElement;
@@ -177,7 +178,7 @@ namespace AlprApp.WebComponents {
         private _setMessage() {
             this.alprDataPo.beginEdit();
             var textarea = (document.getElementById("inputSelfWrittenMelding")) as HTMLSelectElement;
-            this.alprDataPo.setAttributeValue("Message", textarea.value);
+            this.alprDataPo.setAttributeValue("Message", textarea.value + "");
 
             this._ValidateTextArea(textarea.value);
         }
@@ -244,48 +245,39 @@ namespace AlprApp.WebComponents {
 
             //Permissions vragen voor cameras
             (async () => {
-                await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-                console.log("NA DE AWAIT");
+                await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
            
-
-
-            //Environment camera aanspreken indien aanwezig
-            navigator.mediaDevices.enumerateDevices()
-                .then(devices => {
-                    let videoDevices = [];
-                    let videoDeviceID = "";
-                    devices.forEach(function (device) {
-                        console.log(device.kind + ": " + device.label +
-                            " id = " + device.deviceId);
-                        if (device.kind == "videoinput") {
-                            videoDevices.push(device.deviceId);
+                //Environment camera aanspreken indien aanwezig
+                navigator.mediaDevices.enumerateDevices()
+                    .then(devices => {
+                    
+                        let videoDevices = [];
+                        let videoDeviceID = "";
+                        devices.forEach(device => {
+                            console.log(device.kind + ": " + device.label +
+                                " id = " + device.deviceId);
+                            if (device.kind == "videoinput") {
+                                videoDevices.push(device.deviceId);
+                            }
+                        });
+                        if (videoDevices.length == 1) {
+                            videoDeviceID = videoDevices[0]
+                        } else if (videoDevices.length == 2) {
+                            videoDeviceID = videoDevices[1]
                         }
-                    });
 
-                    if (videoDevices.length == 1) {
-                        videoDeviceID = videoDevices[0]
-                    } else if (videoDevices.length == 2) {
-                        videoDeviceID = videoDevices[1]
-                    }
-
-
-                    const constraints = {
-                        width: { ideal: 480, max: 3120, },
-                        height: { ideal: 640, max: 4160 },
-                        deviceId: { exact: videoDeviceID }
-                    };
-
-                    return navigator.mediaDevices.getUserMedia({ video: constraints });
-
-                }) //promise zetten op pas door te gaan als de camera actief is
-                .then((stream) => { video.srcObject = stream; return new Promise(resolve => video.onplaying = resolve); }) 
-                .then(() => mainLoopId = setInterval(_screenshotVideo, 500)) // foto interval starten
-                .catch(e => console.error(e));
-
-                this.alprDataPo.beginEdit();
-
-            })();
-
+                        const constraints = {
+                            width: { ideal: 480, max: 3120, },
+                            height: { ideal: 640, max: 4160 },
+                            deviceId: { exact: videoDeviceID }
+                        };
+                        return navigator.mediaDevices.getUserMedia({ video: constraints });
+                    }) //promise zetten op pas door te gaan als de camera actief is
+                    .then((stream) => { video.srcObject = stream; return new Promise(resolve => video.onplaying = resolve); }) 
+                    .then(() => mainLoopId = setInterval(_screenshotVideo, 500)) // foto interval starten
+                    .catch(e => console.error(e));
+                    this.alprDataPo.beginEdit();
+                })();
             //functie aanroepen als de foto wordt veranderd
             document.getElementById("screenshot").addEventListener(
                 "load",
@@ -308,6 +300,19 @@ namespace AlprApp.WebComponents {
                         mainLoopId = setInterval(_screenshotVideo, 500)
                         return
                     }
+
+                    // CAMERA STOPPEN???
+                    console.log("stap1");
+                    (<MediaStream>video.srcObject).getTracks().forEach( stream => 
+                        stream.stop(),
+                        console.log("stopped stream")
+                    );
+                    
+                    console.log("stap2");
+                    video.srcObject = null;
+                    
+
+                    console.log("stap3");
 
                     tempThis.alprDataPo.setAttributeValue("InDB", returnedPO.getAttributeValue("InDB"));
                     var candidatesString = returnedPO.getAttributeValue("Candidates") as string;

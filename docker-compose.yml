@@ -15,7 +15,11 @@ services:
     alpr-app:
         build: AlprApp/.
         ports:
-            - "5001:80"
+            - "5001:5001"
+            - "443:443"
+            - "80:80" 
+            - "587:587"
+            - "25:25"
         environment:
             DBServer: "ms-sql-server"
             DBPort: '1433'
