@@ -245,7 +245,7 @@ namespace AlprApp.WebComponents {
 
             //Permissions vragen voor cameras
             (async () => {
-                await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+                await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
            
                 //Environment camera aanspreken indien aanwezig
                 navigator.mediaDevices.enumerateDevices()
@@ -302,15 +302,15 @@ namespace AlprApp.WebComponents {
                     }
 
                     // CAMERA STOPPEN???
-                    console.log("stap1")
-                    video.pause;
-                    video.src=null;
-                    
-                    console.log("stap2");
+                    console.log("stap1");
                     (<MediaStream>video.srcObject).getTracks().forEach( stream => 
                         stream.stop(),
                         console.log("stopped stream")
                     );
+                    
+                    console.log("stap2");
+                    video.srcObject = null;
+                    
 
                     console.log("stap3");
 

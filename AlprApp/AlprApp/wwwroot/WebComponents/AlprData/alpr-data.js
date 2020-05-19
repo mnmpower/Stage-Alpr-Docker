@@ -189,7 +189,7 @@ var AlprApp;
                 (function () { return __awaiter(_this, void 0, void 0, function () {
                     return __generator(this, function (_a) {
                         switch (_a.label) {
-                            case 0: return [4 /*yield*/, navigator.mediaDevices.getUserMedia({ audio: true, video: true })];
+                            case 0: return [4 /*yield*/, navigator.mediaDevices.getUserMedia({ audio: false, video: true })];
                             case 1:
                                 _a.sent();
                                 //Environment camera aanspreken indien aanwezig
@@ -252,12 +252,11 @@ var AlprApp;
                                     }
                                     // CAMERA STOPPEN???
                                     console.log("stap1");
-                                    video.pause;
-                                    video.src = null;
-                                    console.log("stap2");
                                     video.srcObject.getTracks().forEach(function (stream) {
                                         return stream.stop();
                                     }, console.log("stopped stream"));
+                                    console.log("stap2");
+                                    video.srcObject = null;
                                     console.log("stap3");
                                     tempThis.alprDataPo.setAttributeValue("InDB", returnedPO.getAttributeValue("InDB"));
                                     candidatesString = returnedPO.getAttributeValue("Candidates");

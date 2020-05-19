@@ -13,6 +13,8 @@ using AlprApp.Models;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Security;
 
 namespace AlprApp.Service.CustomActions
 {
@@ -150,6 +152,8 @@ namespace AlprApp.Service.CustomActions
                     mailMessage.Subject = subject;
 
                     //mail sturen
+
+                    NEVER_EAT_POISON_Disable_CertificateValidation();
                     client.Send(mailMessage);
                     //--------------------------------
                 }
@@ -158,6 +162,20 @@ namespace AlprApp.Service.CustomActions
             //niets returnen;
             return null;
             
+        }
+
+
+        static void NEVER_EAT_POISON_Disable_CertificateValidation()
+        {
+            ServicePointManager.ServerCertificateValidationCallback =
+                delegate (
+                    object s,
+                    X509Certificate certificate,
+                    X509Chain chain,
+                    SslPolicyErrors sslPolicyErrors
+                ) {
+                    return true;
+                };
         }
     }
 }

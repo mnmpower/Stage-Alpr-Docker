@@ -9,16 +9,11 @@ WORKDIR /app
 
 #Install nginx
 RUN apt-get update
-RUN apt-get install -y nginx
-RUN apt-get install -y systemd
-RUN apt-get install -y apt-utils
-RUN apt-get install -y libgdiplus
-RUN apt-get install -y libc6-dev 
+RUN apt-get install -y nginx && apt-get install -y systemd && apt-get install -y apt-utils && apt-get install -y libgdiplus && apt-get install -y libc6-dev
 RUN ln -s /usr/lib/libgdiplus.so/usr/lib/gdiplus.dll
 
 #Add the customized NGINX configuration
-RUN rm -f /etc/nginx/nginx.conf
-RUN rm -f /etc/nginx/sites-enabled/*
+RUN rm -f /etc/nginx/nginx.conf && rm -f /etc/nginx/sites-enabled/*
 
 COPY nginx/. /etc/nginx/.
 RUN nginx -t
